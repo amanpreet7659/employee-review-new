@@ -132,6 +132,7 @@ export default function ReviewForm({
                   errors.reviewPeriod?.from ? "is-invalid" : ""
                 }`}
                 placeholderText="From"
+                maxDate={new Date()}
               />
             )}
           />
