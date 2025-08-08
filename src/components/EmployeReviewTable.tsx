@@ -16,24 +16,6 @@ export default function ReviewTable() {
   const dispatch = useDispatch();
   const [editReview, setEditReview] = useState<Review | null>(null);
   const [searchText, setSearchText] = useState("");
-  const conditionalRowStyles = [
-    {
-      when: (row: any) => row.performanceTier === "Excellent",
-      style: { backgroundColor: "#d4edda", color: "#155724" },
-    },
-    {
-      when: (row: any) => row.performanceTier === "Good",
-      style: { backgroundColor: "#cce5ff", color: "#004085" },
-    },
-    {
-      when: (row: any) => row.performanceTier === "Average",
-      style: { backgroundColor: "#fff3cd", color: "#856404" },
-    },
-    {
-      when: (row: any) => row.performanceTier === "Poor",
-      style: { backgroundColor: "#f8d7da", color: "#721c24" },
-    },
-  ];
 
   const columns = [
     { name: "Name", selector: (row: any) => row.employeeName, sortable: true },
